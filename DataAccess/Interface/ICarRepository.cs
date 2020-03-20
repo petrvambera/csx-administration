@@ -1,0 +1,16 @@
+﻿using DataAccess.Model;
+using DataAccess.Repository;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccess.Interface
+{
+    public interface ICarRepository : IBaseRepository<Car>
+    {
+
+
+    }
+}

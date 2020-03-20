@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DataAccess.Model.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarMark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearOfManufacture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnginePower)
+        </th>
+        <th>
+            Aktuální řidič
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarMark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarModel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearOfManufacture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnginePower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDriver.NameSurname) 
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

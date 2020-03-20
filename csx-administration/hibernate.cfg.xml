@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+  <session-factory>
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property> 
+  <property name="connection.connection_string">
+    Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-csx-administration-20200307052043.mdf;Initial Catalog=aspnet-csx-administration-20200307052043;Integrated Security=True" providerName="System.Data.SqlClient"
+  </property>
+  <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+  <mapping assembly="DataAccess" />
+  </session-factory>
+</hibernate-configuration>
